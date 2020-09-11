@@ -1,13 +1,15 @@
-// libraries
+//libraries
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 //components
 import { Category, SortPopup } from '../components'
 import PizzaBlock from '../components/PizzaBlock'
-// actions
-import { setCategoryBy } from '../redux/reducers/filter'
+//actions
+import { setCategoryBy, setSortBy } from '../redux/reducers/filter'
+import PizzaBlockPreloader from '../components/PizzaBlockPreloader'
+import { setPizzas } from '../redux/reducers/pizzas'
 
-
+//Component settings
 const sortIems = [
 	{ name: 'популярности', type: 'popular', order: 'desc' },
 	{ name: 'цене', type: 'price', order: 'desc' },
@@ -18,25 +20,45 @@ const categories = ['Мясные', 'Вегетарианская', 'Гриль'
 
 function Home() {	
 
+	//global store
 	const dispatch = useDispatch()
-	const pizzas = useSelector(state => { 
-		console.log('беру пиццы из store') 
-		return state.pizzasReducer.pizzas
-	})
+	const pizzas = useSelector(state =>  state.pizzasReducer.pizzas)
+	const isLoaded = useSelector(state => state.pizzasReducer.isLoaded)
+	const { category, sort } = useSelector(state => state.filterReducer)
 
-	const onSelectCategory = React.useCallback((index) => {
-		dispatch(setCategoryBy(index))
+	//hooks
+	React.useEffect(() => {
+		dispatch(setPizzas(category, sort))
+	}, [dispatch, category, sort])
+
+	//local functions
+	const onSelectCategory = React.useCallback((category) => {
+		dispatch(setCategoryBy(category))
 	}, [dispatch])
-	
+
+	const onSelectSort = React.useCallback((obj) => {
+		dispatch(setSortBy(obj))
+	}, [dispatch])	
+
 	return (
 		<div className="container">
 			<div className="content__top">
-				<Category items={categories} setCategory={onSelectCategory} />
-				<SortPopup items={sortIems} />
+				<Category 
+					activeCategory={category} 
+					items={categories} 
+					onClickCategory={onSelectCategory} 
+				/>
+				<SortPopup 
+					activeSort={sort.type}
+					items={sortIems} 
+					onClickSort={onSelectSort}
+				/>
 			</div>
 			<h2 className="content__title">Все пиццы</h2>
 			<div className="content__items">
-				{pizzas.map(items => <PizzaBlock key={items.id}  {...items} />)}
+				{isLoaded 
+					? pizzas.map(items => <PizzaBlock key={items.id}  {...items} />)
+					: Array(10).fill(0).map((_, index) => <PizzaBlockPreloader key={index} /> )}
 			</div>
 	  	</div>	
 	)

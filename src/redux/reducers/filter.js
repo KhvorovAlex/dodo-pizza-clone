@@ -2,8 +2,11 @@ const SET_SORT = "filterReducer/SET_SORT"
 const SET_CATEGORY = "filterReducer/SET_CATEGORY"
 
 const initialState = {
-	sort: 'popular',
-	category: 'category'
+	sort: {
+		type: 'popular', 
+		order: 'desc'
+	},
+	category: null
 }
 
 
@@ -28,5 +31,5 @@ const filterReducer = (state = initialState, action) => {
 
 export default filterReducer
 
-export const setSortBy = (sort) => ({type: SET_SORT, payload: sort})
+export const setSortBy = ({type, order}) => ({type: SET_SORT, payload: {type, order}})
 export const setCategoryBy = (category) => ({type: SET_CATEGORY, payload: category})

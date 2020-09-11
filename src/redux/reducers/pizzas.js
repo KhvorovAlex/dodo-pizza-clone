@@ -1,4 +1,8 @@
+//libraries
+import axios from 'axios'
+
 const SET_PIZZAS_SUCCESS = "pizzasReducer/SET_PIZZAS_SUCCESS"
+const SET_LOADED = "pizzasReducer/SET_LOADED"
 
 const initialState = {
 	pizzas: [],
@@ -15,6 +19,12 @@ const pizzasReducer = (state = initialState, action) => {
 				isLoaded: true
 			}
 
+		case SET_LOADED: 
+			return {
+				...state,
+				isLoaded: action.payload
+			}
+
 		default:
 			return state
 	}
@@ -22,4 +32,13 @@ const pizzasReducer = (state = initialState, action) => {
 
 export default pizzasReducer
 
-export const setPizzasSuccess = (pizzas) => ({type: SET_PIZZAS_SUCCESS, payload: pizzas})
+//actions
+const setPizzasSuccess = (pizzas) => ({type: SET_PIZZAS_SUCCESS, payload: pizzas})
+const setLoaded = (value) => ({type: SET_LOADED, payload: value})
+
+//thunks
+export const setPizzas = (category, {type, order}) => (dispatch) => {
+	dispatch(setLoaded(false))
+	axios.get(`http://localhost:3001/pizzas?${category !== null ? 'category=' + category : ''}&_sort=${type}&_order=${order}`)
+		.then(response => dispatch(setPizzasSuccess(response.data)))
+}

@@ -1,17 +1,21 @@
+//libraries
 import React from 'react'
 import cNames from 'classnames'
 import PropTypes, { number } from 'prop-types'
-
+//components
 import pizzaImg from '../assets/img/pizza.png'
 
 function PizzaBlock({ name, imageUrl, types, sizes, price, category, rating }) {
 	
+	//local settings
 	const availabelSizes = [26, 30, 40]
 	const availabelTypes = ['тонкое', 'традиционное']
 	
+	//local state
 	const [activeType, setActiveType] = React.useState(types[0])
 	const [activeSize, setActiveSize] = React.useState(sizes[0])
-
+	
+	//local functions
 	const onSelectType = (index) => {
 		setActiveType(index)
 	}
@@ -81,6 +85,7 @@ function PizzaBlock({ name, imageUrl, types, sizes, price, category, rating }) {
 	)
 }
 
+//component settings
 PizzaBlock.propTypes = {
 	name: PropTypes.string.isRequired,
 	imageUrl: PropTypes.string.isRequired,

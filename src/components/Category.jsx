@@ -1,15 +1,9 @@
 // libraries
 import React from 'react'
+import { func, string, arrayOf } from 'prop-types'
 
 const Category = React.memo(	
-	function Category({ items, setCategory }) {
-
-	const [ activeItem, setActiveItem ] = React.useState(null)
-		
-	const onSelectItem = (index) => {
-		setActiveItem(index)
-		setCategory(index)
-	}
+	function Category({ activeCategory, items, onClickCategory }) {
 
 	console.log("RENDER component Category")
 
@@ -17,16 +11,16 @@ const Category = React.memo(
 		<div className="categories">
 			<ul>
 				<li 
-					onClick={() => onSelectItem(null)}
-					className={activeItem === null ? 'active' : ''}
+					onClick={() => onClickCategory(null)}
+					className={activeCategory === null ? 'active' : ''}
 				>
 					Все
 				</li>
 				{items && items.map((name, index) => 
 					<li 
 						key={name}
-						onClick={() => onSelectItem(index)}
-						className={activeItem === index ? 'active' : ''}
+						onClick={() => onClickCategory(index)}
+						className={activeCategory === index ? 'active' : ''}
 					>
 						{name}
 					</li> 
@@ -35,5 +29,17 @@ const Category = React.memo(
 		</div>
 	)
 })
+
+//component settings
+Category.propTypes = {
+	items: arrayOf(string).isRequired, 
+	onClickCategory: func
+}
+
+Category.defaultProps = {
+	activeCategory: null,
+	items: [], 
+	onClickCategory: func,
+}
 
 export default Category
