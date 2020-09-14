@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/dodo-pizza-clone/static/css/main.66ee3d2b.chunk.css",
+    "main.js": "/dodo-pizza-clone/static/js/main.a0fd5a5b.chunk.js",
+    "main.js.map": "/dodo-pizza-clone/static/js/main.a0fd5a5b.chunk.js.map",
+    "runtime-main.js": "/dodo-pizza-clone/static/js/runtime-main.427a9cd5.js",
+    "runtime-main.js.map": "/dodo-pizza-clone/static/js/runtime-main.427a9cd5.js.map",
+    "static/js/2.a65d26f2.chunk.js": "/dodo-pizza-clone/static/js/2.a65d26f2.chunk.js",
+    "static/js/2.a65d26f2.chunk.js.map": "/dodo-pizza-clone/static/js/2.a65d26f2.chunk.js.map",
+    "index.html": "/dodo-pizza-clone/index.html",
+    "precache-manifest.568a2d1f68a36fe89c755c9dd66a1943.js": "/dodo-pizza-clone/precache-manifest.568a2d1f68a36fe89c755c9dd66a1943.js",
+    "service-worker.js": "/dodo-pizza-clone/service-worker.js",
+    "static/css/main.66ee3d2b.chunk.css.map": "/dodo-pizza-clone/static/css/main.66ee3d2b.chunk.css.map",
+    "static/js/2.a65d26f2.chunk.js.LICENSE.txt": "/dodo-pizza-clone/static/js/2.a65d26f2.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/dodo-pizza-clone/static/media/ProximaNova-Regular.b7c51278.eot",
+    "static/media/empty-cart.png": "/dodo-pizza-clone/static/media/empty-cart.ceb2faf0.png",
+    "static/media/pizza-logo.svg": "/dodo-pizza-clone/static/media/pizza-logo.f3327011.svg",
+    "static/media/pizza.png": "/dodo-pizza-clone/static/media/pizza.6a5172e0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.427a9cd5.js",
+    "static/js/2.a65d26f2.chunk.js",
+    "static/css/main.66ee3d2b.chunk.css",
+    "static/js/main.a0fd5a5b.chunk.js"
+  ]
+}
