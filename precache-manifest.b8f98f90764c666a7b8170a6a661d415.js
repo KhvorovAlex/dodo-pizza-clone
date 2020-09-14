@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "142d41bcfa6f26b59ef89de5a01ea28d",
+    "revision": "7e23e3b9c99c70dd32e1daecdd7ad1a0",
     "url": "/dodo-pizza-clone/index.html"
   },
   {
-    "revision": "6a5522b8ac3a3c2540bf",
+    "revision": "a0d1326b7eafd058054e",
     "url": "/dodo-pizza-clone/static/css/main.66ee3d2b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dodo-pizza-clone/static/js/2.1b78e456.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6a5522b8ac3a3c2540bf",
-    "url": "/dodo-pizza-clone/static/js/main.8f084feb.chunk.js"
+    "revision": "a0d1326b7eafd058054e",
+    "url": "/dodo-pizza-clone/static/js/main.65097673.chunk.js"
   },
   {
     "revision": "2ab78ad929c650175bac",
