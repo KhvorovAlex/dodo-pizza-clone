@@ -14,15 +14,16 @@ function Header() {
     return (
         <div className="header">
             <div className="container">
-                <div className="header__logo">
-                    <NavLink to="/">
+                <NavLink to="/">
+                    <div className="header__logo">
                         <img width="38" src={logo} alt="Pizza logo" />
-                    </NavLink>
-                    <div>
-                        <h1>Dodo Pizza Clone</h1>
-                        <p>самая вкусная пицца во вселенной</p>
+
+                        <div>
+                            <h1>React Pizza Clone</h1>
+                            <p>самая вкусная пицца во вселенной</p>
+                        </div>
                     </div>
-                </div>
+                </NavLink>
                 <div className="header__cart">
                     <NavLink to="/cart">
                         <Button className="button--cart">

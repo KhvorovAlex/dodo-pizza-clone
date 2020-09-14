@@ -69,7 +69,7 @@ function Home() {
                               key={items.id}
                               {...items}
                               addPizzaToCart={addPizzaToCart}
-                              addedCount={cartItems[items.id] && cartItems[items.id].length}
+                              addedCount={cartItems[items.id] && cartItems[items.id].items.length}
                           />
                       ))
                     : Array(10)
