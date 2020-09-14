@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dodo-pizza-clone/precache-manifest.568a2d1f68a36fe89c755c9dd66a1943.js"
+  "/dodo-pizza-clone/precache-manifest.48d90dcf8a2218a4d19d309873c65a56.js"
 );
 
 self.addEventListener('message', (event) => {

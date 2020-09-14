@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd53e019a6ecf0bf038cc23a9d0a09e1",
+    "revision": "142d41bcfa6f26b59ef89de5a01ea28d",
     "url": "/dodo-pizza-clone/index.html"
   },
   {
-    "revision": "4f3a874eee68df09f019",
+    "revision": "6a5522b8ac3a3c2540bf",
     "url": "/dodo-pizza-clone/static/css/main.66ee3d2b.chunk.css"
   },
   {
-    "revision": "ecbedd139dddb74df68f",
-    "url": "/dodo-pizza-clone/static/js/2.a65d26f2.chunk.js"
+    "revision": "716648fac785e11ab2f9",
+    "url": "/dodo-pizza-clone/static/js/2.1b78e456.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/dodo-pizza-clone/static/js/2.a65d26f2.chunk.js.LICENSE.txt"
+    "url": "/dodo-pizza-clone/static/js/2.1b78e456.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f3a874eee68df09f019",
-    "url": "/dodo-pizza-clone/static/js/main.a0fd5a5b.chunk.js"
+    "revision": "6a5522b8ac3a3c2540bf",
+    "url": "/dodo-pizza-clone/static/js/main.8f084feb.chunk.js"
   },
   {
     "revision": "2ab78ad929c650175bac",
